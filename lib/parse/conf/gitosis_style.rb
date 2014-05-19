@@ -1,5 +1,3 @@
-require "pry"
-
 module Parse
   module Conf
     class GitosisStyle
