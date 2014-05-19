@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    parse-conf (0.0.1)
+    parse-conf (0.0.2)
 
 GEM
   remote: https://rubygems.org/
