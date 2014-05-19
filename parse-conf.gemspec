@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["kamil.kucharski88+1@gmail.com"]
   spec.summary       = %q{Parse standard unix config}
   spec.description   = %q{Parse standard unix config}
-  spec.homepage      = "http://github.com/"
+  spec.homepage      = "https://github.com/maringan/parse-conf"
   spec.license       = "MIT"
   spec.files         = `git ls-files -z`.split("\x0")
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
