@@ -1,3 +1,4 @@
+require 'parse/conf'
 require 'minitest'
 require 'minitest/unit'
 require 'minitest/autorun'
