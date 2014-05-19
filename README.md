@@ -1,4 +1,5 @@
 # Parse::Conf
+[![Build Status](https://travis-ci.org/maringan/parse-conf.svg)](https://travis-ci.org/maringan/parse-conf)
 
 TODO: Write a gem description
 
