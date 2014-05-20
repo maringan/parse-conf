@@ -6,8 +6,17 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
+    codeclimate-test-reporter (0.3.0)
+      simplecov (>= 0.7.1, < 1.0.0)
+    docile (1.1.3)
     minitest (5.3.4)
+    multi_json (1.10.0)
     rake (10.3.2)
+    simplecov (0.8.2)
+      docile (~> 1.1.0)
+      multi_json
+      simplecov-html (~> 0.8.0)
+    simplecov-html (0.8.0)
 
 PLATFORMS
   java
@@ -15,6 +24,7 @@ PLATFORMS
 
 DEPENDENCIES
   bundler (~> 1.5)
+  codeclimate-test-reporter
   minitest
   parse-conf!
   rake
