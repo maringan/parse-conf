@@ -3,8 +3,7 @@ require 'test_helper'
 
 class GitosisStyleTest < MiniTest::Unit::TestCase
   def setup
-    @expected_result = {"without_group"=>[], "gitosis"=>[{"gitweb"=>["no"]}, {"daemon"=>["no"]}, {"loglevel"=>["DEBUG"]}], "group quux"=>[{"members"=>["jdoe", "wsmith", "@anothergroup"]}, {"writable"=>["foo", "bar", "baz/thud"]}, {"readonly"=>["xyzzy"]}], "group anothergroup"=>[{"members"=>["alice", "bill"]}, {"map writable visiblename1"=>["actualname1"]}, {"map readonly visiblename2"=>["actualname2"]}], "repo foo"=>[{"gitweb"=>["yes"]}, {"description"=>["blah", "blah"]}, {"owner"=>["John", "Doe"]}, {"daemon"=>["yes"]}], "gitweb"=>[], "mirror github"=>[{"repos"=>["@all"]}, {"uri"=>["git@github.com:res0nat0r/%s.git"]}], "repo bar"=>[{"mirrors"=>["/var/trac/bar/repository"]}]}
-    
+    @expected_result = {"without_group"=>[], "gitosis"=>{"gitweb"=>["no"], "daemon"=>["no"], "loglevel"=>["DEBUG"]}, "group quux"=>{"members"=>["jdoe", "wsmith", "@anothergroup"], "writable"=>["foo", "bar", "baz/thud"], "readonly"=>["xyzzy"]}, "group anothergroup"=>{"members"=>["alice", "bill"], "map writable visiblename1"=>["actualname1"], "map readonly visiblename2"=>["actualname2"]}, "repo foo"=>{"gitweb"=>["yes"], "description"=>["blah", "blah"], "owner"=>["John", "Doe"], "daemon"=>["yes"]}, "gitweb"=>{}, "mirror github"=>{"repos"=>["@all"], "uri"=>["git@github.com:res0nat0r/%s.git"]}, "repo bar"=>{"mirrors"=>["/var/trac/bar/repository"]}}
     @config_raw = File.open('test/config_example/gitosis.conf').read
     @parser = Parse::Conf::GitosisStyle.new(@config_raw)
   end
